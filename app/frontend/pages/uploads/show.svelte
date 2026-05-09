@@ -1,18 +1,12 @@
-<script>
-  import keo from '/assets/logo-white.svg'
-</script>
-
-
 <div class="root">
   <nav class="subNav">
-    <img class="logo keo" src={keo} alt="Keo logo"/>
+    <img class="logo keo" src="~/assets/logo-white.svg" alt="Keo logo"/>
   </nav>
 
   <div class="footer">
     <div class="card">
       <p>
         Keo Platforms LLC<br>
-        Inernational Model Scouting and Monetization<br>
         26-28 Hà Chương, An Hải, Đà Nẵng 550000, Vietnam<br>
         Zalo: <a href="https://zalo.me/0869344003" target="_blank">0869.344003</a><br>
       </p>
