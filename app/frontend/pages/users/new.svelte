@@ -41,10 +41,14 @@
       50%
     </button>
   </div>
-  {/if}
   <a href="" class="btn mt-8 mb-2">
     + Upload your first photo
   </a><br>
   or
   <a use:inertia href="/dashboard" >continue to dashboard</a>
+  {:else}
+  <div class="card mt-4">
+    Keo is currently invite-only.
+  </div>
+  {/if}
 </main>
