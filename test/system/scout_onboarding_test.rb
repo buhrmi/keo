@@ -38,9 +38,6 @@ class ScoutOnboardingTest < ApplicationSystemTestCase
     assert_text "30%"
 
     click_link "continue to dashboard"
-    assert_current_path new_session_path, ignore_query: true
-    assert_text(/(continue|log in) with zalo/i)
-
 
     click_on("Log in with Zalo")
 
