@@ -17,10 +17,11 @@
 </script>
 
 <main class="text-center">
+  <section>
   <img class="logo w-2/3 max-w-80 mx-auto pt-8 mb-4" src="~/assets/logo-gold.png" alt="Keo logo"/>
   <p class="mb-8">
     <!-- 0 VND paid out to creators so far. <br> -->
-    The easiest way to turn talent into revenue
+    Turn your talent into revenue
   </p>
   {#if scout}
   <p>
@@ -49,27 +50,34 @@
       </section>
     {/if}
   </div>
-  <a href="" class="upload-btn mt-8 mb-2">
-    Set up my profile
-  </a>
   {:else}
   <div class="card mt-4">
     Keo is currently invite-only.
   </div>
   {/if}
+  </section>
 </main>
+
+{#if scout}
+  <footer>
+    <section>
+      <a href="" class="upload-btn mt-8 mb-2">
+        Set up my profile
+      </a>
+    </section>
+  </footer>
+{/if}
 
 
 <style>
   .logo {
-    filter: drop-shadow(0 5px 5px rgba(0, 0, 0));
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0)) drop-shadow(0 0 50px rgba(183, 134, 71, 0.5));
   }
 
 
   .upload-btn {
   display: inline-block;
   padding: 14px 32px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #ffffff;

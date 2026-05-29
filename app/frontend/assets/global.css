@@ -1,5 +1,7 @@
+
+
 body {
-  min-height: 100dvh;
+  
   color: #ffffff;
   background: radial-gradient(circle at top, #2b2b2b 0%, #000000 100%);
   --primary: #c2ae7f;
@@ -7,17 +9,43 @@ body {
   --bg-primary-active: #ffffff;
 }
 
-
 #app {
   max-width: 800px;
   margin: 0 auto;
 }
 
-main {
-  padding-inline: 1rem;
+#app > .layout {
+  min-height: 100dvh;
 }
 
-main > section {
+.layout {
+  display: grid;
+  width: 100%;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header"
+                       "main"
+                       "footer";
+}
+
+main {
+  grid-area: main;
+  
+}
+
+header {
+  
+  grid-area: header;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  grid-area: footer;
+  background: linear-gradient(to top, #000000, transparent);
+}
+
+main > section,
+footer > section {
   display: grid;
   grid-template-columns: 1rem auto 1rem;
   /* border-bottom: 1px solid #444; */
