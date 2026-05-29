@@ -15,6 +15,7 @@ class SessionsController < ApplicationController
     cookies.delete(:share_percentage)
 
     flash[:notice] = "Signed in successfully."
+    session[:redirect_authenticated_user_to] ||= dashboard_root_path
     render layout: false
   end
 

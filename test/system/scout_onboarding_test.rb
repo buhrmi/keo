@@ -37,9 +37,9 @@ class ScoutOnboardingTest < ApplicationSystemTestCase
     )
     assert_text "30%"
 
-    click_link "continue to dashboard"
+    click_on "Set up my account"
 
-    click_on("Log in with Zalo")
+    click_on "Continue with Zalo"
 
     assert_text "Account Balance"
 
