@@ -1,5 +1,5 @@
 <script>
-  import { inertia } from 'inertiax-svelte'
+  import { inertia } from '@inertiajs/svelte'
 </script>
 
 <main>

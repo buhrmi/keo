@@ -1,1 +1,0 @@
-import{M as e}from"./client-C6yS_-c2.js";e();

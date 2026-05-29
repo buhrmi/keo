@@ -1,9 +1,9 @@
 <script>
-  import { inertia } from 'inertiax-svelte'
+  import { inertia } from '@inertiajs/svelte'
   import { Tween } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
   import { slide } from 'svelte/transition';
-  
+
   const { scout } = $props()
   let percentage = new Tween(15, {
     easing: cubicOut,

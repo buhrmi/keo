@@ -3,7 +3,7 @@ import 'virtual:uno.css'
 import '~/assets/global.css'
 import Default from "~/layouts/default.svelte"
 
-import { createInertiaApp, router } from 'inertiax-svelte'
+import { createInertiaApp, router } from '@inertiajs/svelte'
 
 createInertiaApp({
   pages: "../pages",

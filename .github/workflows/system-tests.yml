@@ -1,0 +1,40 @@
+name: System Tests
+
+on:
+  push:
+
+jobs:
+  system-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      CI: "true"
+      RAILS_ENV: test
+      VITE_RUBY_AUTO_BUILD: "false"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install JavaScript dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build Vite assets for test
+        run: bin/vite build
+
+      - name: Set up Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Prepare test database
+        run: bin/rails db:prepare
+
+      - name: Run system tests
+        run: bin/rails test:system
