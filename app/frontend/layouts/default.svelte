@@ -1,6 +1,41 @@
 <script>
-  const { children } = $props()
+import { onMount } from 'svelte'
+import { router } from '@inertiajs/svelte'
+const { children } = $props()
+
+function setup() {
+  // add .loading class to body while inertia is loading
+  document.addEventListener("inertia:start", () => {
+    document.body.classList.add("loading")
+  })
+
+  // remove .loading class from body when inertia finishes loading
+  document.addEventListener("inertia:finish", () => {
+    document.body.classList.remove("loading")
+    document.querySelectorAll(".loader").forEach(el => el.classList.remove("loader"))
+  })
+
+  // add the loader class to all .btn elements when they are clicked
+  document.addEventListener("click", (ev) => {
+    const btn = ev.target.closest(".btn")
+    if (btn) {
+      btn.classList.add("loader")
+    }
+  })
+
+  window.addEventListener('message', function(event) {
+    if (event.data == 'session-created') {
+      router.reload()
+    }
+  })
+}
+
+onMount(setup)
 </script>
+
+<svelte:head>
+  <title>Keo - Turn talent into revenue</title>
+</svelte:head>
 
 <div class="layout">
   {@render children()}

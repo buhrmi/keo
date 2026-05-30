@@ -15,7 +15,11 @@ export default defineConfig({
         presetWind4()
       ],
     }),
-    inertia(),
+    inertia({
+      ssr: {
+        entry: 'entrypoints/inertia.js',
+      },
+    }),
     svelte(),
   ],
 })
