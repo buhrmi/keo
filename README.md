@@ -1,7 +1,5 @@
 # Keo
 
-Keo is a humble little talent scouting and content monetization platform.
-
-Probably the easiest way to turn talent into revenue.
+Keo is an open source platform where users can showcase their talent, sell content, and accept bookings.
 
 © Keo Platforms LLC

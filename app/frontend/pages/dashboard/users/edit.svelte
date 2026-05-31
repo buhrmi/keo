@@ -9,6 +9,7 @@
 <main>
   <section>
     <div class="header_image full w-full">
+    {JSON.stringify(current_user)}
       
     </div>
     <div class="flex">

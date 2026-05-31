@@ -1,7 +1,16 @@
 class User < ApplicationRecord
+  JSON_OPTIONS = {
+    only: [ :id, :name ],
+    include: {
+      profile_image: ActiveStorage::Attachment::DEFAULT_OPTIONS,
+      header_image: ActiveStorage::Attachment::DEFAULT_OPTIONS
+    }
+  }
+
   has_secure_password
 
   has_one_attached :profile_image
+  has_one_attached :header_image
 
   has_many :identities, dependent: :destroy
   has_many :posts # TODO: what to do with posts when user is deleted?
@@ -15,7 +24,8 @@ class User < ApplicationRecord
 
     identity = identities.find { |identity| identity.info["image"].present? }
     if identity
-      profile_image.attach(io: URI.open(identity.info["image"]), filename: "#{id}_profile_image.jpg")
+      ext = File.extname(identity.info["image"])
+      profile_image.attach(io: URI.open(identity.info["image"]), filename: "#{id}_profile#{ext}")
     end
   end
 end
