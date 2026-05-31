@@ -3,6 +3,7 @@ class CreateUsers < ActiveRecord::Migration[8.1]
     create_table :users do |t|
       t.string :locale, default: "en"
       t.string :name
+      t.string :handle
       t.string :email
       t.string :password_digest
       t.integer :earnings, default: 0

@@ -3,28 +3,25 @@
 </script>
 
 <svelte:head>
-  <title>Dashboard - Edit Profile</title>
+  <title>{current_user.name}</title>
 </svelte:head>
 
-<main>
-  <section class="bg-black">
-    <div
-      class="header_image full w-full"
-      style={current_user.header_image ? `background-image: url('${current_user.header_image.url}')` : ''}
-    ></div>
-
-    
-    <div class="profile_content flex full px-4">
-      <div class="rounded-top"></div>
-      {#if current_user.profile_image}
-        <img src={current_user.profile_image.url} alt="Profile Image" class="avatar" />
-      {/if}
-      <div class="ml-4">
-        <h1 class="text-2xl font-bold">{current_user.name}</h1>
-        <p class="text-gray-500">@{current_user.username}</p>
-      </div>
+<main class="layout">
+  <header
+    class="header_image "
+    style={current_user.header_image ? `background-image: url('${current_user.header_image.url}')` : ''}
+  ></header>
+  
+  <div class="profile_content flex full gap-4 px-4">
+    <div class="rounded-top"></div>
+    {#if current_user.profile_image}
+      <img src={current_user.profile_image.url} alt="Profile Image" class="avatar" />
+    {/if}
+    <div class="leading-snug">
+      <h2 class="">{current_user.name}</h2>
+      <p class="text-gray-500">@{current_user.handle}</p>
     </div>
-  </section>
+  </div>
 </main>
 
 
@@ -59,11 +56,11 @@
   }
 
   .avatar {
-    margin-top: -4rem;
-    width: 8rem;
-    height: 8rem;
+    margin-top: -2rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 9999px;
-    border: 4px solid white;
+    border: 2px solid white;
     background-color: #d1d5db;
   }
 </style>

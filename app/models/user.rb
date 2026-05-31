@@ -1,9 +1,9 @@
 class User < ApplicationRecord
   JSON_OPTIONS = {
-    only: [ :id, :name ],
+    only: [ :id, :name, :handle ],
     include: {
-      profile_image: ActiveStorage::Attachment::DEFAULT_OPTIONS,
-      header_image: ActiveStorage::Attachment::DEFAULT_OPTIONS
+      profile_image: {},
+      header_image: {}
     }
   }
 
