@@ -1,5 +1,5 @@
 <script>
-  import { router } from '@inertiajs/svelte'
+  import { router } from 'inertiax-svelte'
   const { current_user } = $props()
   function back(ev) {
     // TODO: only call history.back() if we stay on the same origin

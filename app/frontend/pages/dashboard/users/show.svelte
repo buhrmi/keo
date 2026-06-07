@@ -1,6 +1,6 @@
 <script>
-  import { inertia } from '@inertiajs/svelte'
-  import { router } from '@inertiajs/svelte'
+  import { inertia } from 'inertiax-svelte'
+  import { router } from 'inertiax-svelte'
 
 </script>
 

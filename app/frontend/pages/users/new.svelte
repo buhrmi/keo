@@ -1,5 +1,5 @@
 <script>
-  import { inertia } from '@inertiajs/svelte'
+  import { inertia } from 'inertiax-svelte'
   import { Tween } from 'svelte/motion';
   import { cubicOut } from 'svelte/easing';
   import { slide } from 'svelte/transition';
@@ -21,7 +21,7 @@
   <img class="logo w-2/3 max-w-80 mx-auto pt-8 mb-4" src="~/assets/logo-gold.png" alt="Keo logo"/>
   <p class="mb-8">
     <!-- 0 VND paid out to creators so far. <br> -->
-    Where talent turns into revenue
+    A new way to monetize your content
   </p>
   {#if scout}
   <p>
@@ -30,7 +30,7 @@
   <div class="card mt-4 text-left">
     <div class="flex items-center gap-4">
       <label for="enable_sharing" class="flex-1">
-        <h3>Automatically share revenue</h3>
+        <h3>Earn together</h3>
         <p class="hint">
           {scout.name} will receive a percentage of what you earn. You can change this any time.
         </p>

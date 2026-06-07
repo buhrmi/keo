@@ -1,6 +1,6 @@
 <script>
 import { onMount } from 'svelte'
-import { router } from '@inertiajs/svelte'
+import { router } from 'inertiax-svelte'
 const { children } = $props()
 
 function setup() {
@@ -34,7 +34,7 @@ onMount(setup)
 </script>
 
 <svelte:head>
-  <title>Keo - Turn talent into revenue</title>
+  <title>Keo</title>
 </svelte:head>
 
 <div class="layout">

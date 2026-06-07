@@ -4,7 +4,7 @@ import '~/assets/global.css'
 
 import Default from "~/layouts/default.svelte"
 
-import { createInertiaApp } from '@inertiajs/svelte'
+import { createInertiaApp } from 'inertiax-svelte'
 
 createInertiaApp({
   pages: "../pages",

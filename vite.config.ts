@@ -1,5 +1,5 @@
 import { svelte } from '@sveltejs/vite-plugin-svelte'
-import inertia from '@inertiajs/vite'
+import inertia from 'inertiax-vite'
 import { defineConfig } from 'vite'
 import RubyPlugin from 'vite-plugin-ruby'
 import UnoCSS from 'unocss/vite'
@@ -17,7 +17,7 @@ export default defineConfig({
     }),
     inertia({
       ssr: {
-        // entry: 'entrypoints/inertia.js',
+        entry: 'entrypoints/inertia.js',
       },
     }),
     svelte(),
