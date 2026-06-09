@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     root "users#show"
   end
 
-  get "upload" => "posts#new"
+  inertia "terms" => "static/terms", as: :terms
   get "up" => "rails/health#show", as: :rails_health_check
 
   # OmniAuth callback routes

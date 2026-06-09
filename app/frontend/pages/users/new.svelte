@@ -20,8 +20,7 @@
   <section>
   <img class="logo w-2/3 max-w-80 mx-auto pt-8 mb-4" src="~/assets/logo-gold.png" alt="Keo logo"/>
   <p class="mb-8">
-    <!-- 0 VND paid out to creators so far. <br> -->
-    A new way to monetize your content
+    The easiest way to earn money with your photos.
   </p>
   {#if scout}
   <p>
@@ -58,14 +57,22 @@
   </section>
 </main>
 
+<footer>
+  <section>
+    <p class="text-sm text-gray-500">
+      &copy; {new Date().getFullYear()} Keo Platforms.
+      <a href="/terms" class="subtle">Terms of Service</a>
+    </p>
+  </section>
+</footer>
 {#if scout}
-  <footer>
+  <nav>
     <section>
-      <a href="/session/new" use:inertia class="btn mt-8 mb-2">
+      <a href="/session/new" class="btn mt-8 mb-2">
         Create my account
       </a>
     </section>
-  </footer>
+  </nav>
 {/if}
 
 
