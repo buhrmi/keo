@@ -36,11 +36,9 @@ body:has(.modal) {
 
 main {
   grid-area: main;
-  
 }
 
 header {
-  
   grid-area: header;
 }
 
@@ -49,9 +47,12 @@ footer {
 }
 
 nav {
+  grid-area: nav;
+}
+
+.layout nav {
   position: sticky;
   bottom: 0;
-  grid-area: nav;
   background: linear-gradient(to top, #000000, transparent);
 }
 

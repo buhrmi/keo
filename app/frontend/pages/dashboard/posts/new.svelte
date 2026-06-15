@@ -1,5 +1,6 @@
 <main>
   <section>
-    <h1>Under construction</h1>
+    <p>This is an Inertia X Frame loaded within a modal.</p>
+    <p>SpaceX mines asteroids. I make modals.</p>
   </section>
 </main>
